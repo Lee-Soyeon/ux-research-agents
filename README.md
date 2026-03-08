@@ -6,10 +6,6 @@ AI-powered UX research analysis toolkit that turns raw user test transcripts int
 
 **Read the [agents](#whats-inside) to get started.**
 
-<img src="https://github.com/user-attachments/assets/placeholder-demo" alt="Demo" width="700"/>
-
-<!-- TODO: Replace with actual demo GIF showing analysis in action -->
-
 ## Get started
 
 ### Prerequisites
