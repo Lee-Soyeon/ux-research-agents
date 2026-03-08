@@ -1,18 +1,18 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24&height=200&section=header&text=UX%20Research%20Agents&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=35&desc=AI-Powered%20Qualitative%20Research%20Analysis&descSize=18&descAlignY=55" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF1493,50:FF69B4,100:FFB6C1&height=200&section=header&text=UX%20Research%20Agents&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=35&desc=AI-Powered%20Qualitative%20Research%20Analysis&descSize=18&descAlignY=55" width="100%"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&random=false&width=600&lines=Turn+raw+transcripts+into+structured+insights;14+proven+UX+methodologies+%E2%80%94+automated;Built+with+Claude+Code+agents;Battle-tested+on+50%2B+real+user+interviews" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&duration=3000&pause=1000&color=FF1493&center=true&vCenter=true&random=false&width=620&lines=Turn+raw+transcripts+into+structured+insights;14+proven+UX+methodologies+%E2%80%94+automated;Built+with+Claude+Code+agents;Battle-tested+on+50%2B+real+user+interviews" alt="Typing SVG" />
 
 <br/>
 <br/>
 
-[![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Built_with-Claude_Code-7c3aed?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/claude-code)
-[![Stars](https://img.shields.io/github/stars/Lee-Soyeon/ux-research-agents?style=for-the-badge&color=f59e0b)](https://github.com/Lee-Soyeon/ux-research-agents/stargazers)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-06b6d4?style=for-the-badge)](CONTRIBUTING.md)
+[![License](https://img.shields.io/badge/License-MIT-FF1493?style=for-the-badge)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Built_with-Claude_Code-FF69B4?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/claude-code)
+[![Stars](https://img.shields.io/github/stars/Lee-Soyeon/ux-research-agents?style=for-the-badge&color=FF1493)](https://github.com/Lee-Soyeon/ux-research-agents/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-FF69B4?style=for-the-badge)](CONTRIBUTING.md)
 
 <br/>
 
@@ -73,34 +73,34 @@ graph LR
     C --> H["Hypothesis Validation"]
     C --> I["Pain/Gain Report"]
 
-    style A fill:#1e293b,stroke:#475569,color:#e2e8f0
-    style B fill:#7c3aed,stroke:#8b5cf6,color:#fff
-    style C fill:#2563eb,stroke:#3b82f6,color:#fff
-    style D fill:#059669,stroke:#10b981,color:#fff
-    style E fill:#059669,stroke:#10b981,color:#fff
-    style F fill:#059669,stroke:#10b981,color:#fff
-    style G fill:#059669,stroke:#10b981,color:#fff
-    style H fill:#059669,stroke:#10b981,color:#fff
-    style I fill:#059669,stroke:#10b981,color:#fff
+    style A fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style B fill:#FF1493,stroke:#FF69B4,color:#fff
+    style C fill:#DB2777,stroke:#FF69B4,color:#fff
+    style D fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style E fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style F fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style G fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style H fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style I fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
 ```
 
 For multiple users, run **Cross-User Analysis** to consolidate:
 
 ```mermaid
 graph LR
-    U1["User 1 Analysis"] --> X["Cross-User\nAnalysis"]
-    U2["User 2 Analysis"] --> X
-    U3["User N Analysis"] --> X
+    U1["User 1\nAnalysis"] --> X["Cross-User\nAnalysis"]
+    U2["User 2\nAnalysis"] --> X
+    U3["User N\nAnalysis"] --> X
     X --> P["Consolidated\nPersonas"]
     X --> G["PMF Pyramid\nDiagnosis"]
     X --> K["Kano Model\nClassification"]
     X --> R["Prioritized\nRecommendations"]
 
-    style X fill:#7c3aed,stroke:#8b5cf6,color:#fff
-    style P fill:#059669,stroke:#10b981,color:#fff
-    style G fill:#059669,stroke:#10b981,color:#fff
-    style K fill:#059669,stroke:#10b981,color:#fff
-    style R fill:#059669,stroke:#10b981,color:#fff
+    style X fill:#FF1493,stroke:#FF69B4,color:#fff
+    style P fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style G fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style K fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
+    style R fill:#1e1e1e,stroke:#FF69B4,color:#FFB6C1
 ```
 
 <br/>
@@ -109,9 +109,9 @@ graph LR
 
 ### 1. Deep Research Analyzer
 
-> `agents/ut-research-analyzer.md` -- 1,200+ lines of battle-tested prompts
+> A comprehensive 14-stage analysis pipeline applying established UX research frameworks to raw interview transcripts. Over 1,200 lines of battle-tested prompts.
 
-A comprehensive **14-stage analysis pipeline** applying established UX research frameworks:
+**`agents/ut-research-analyzer.md`**
 
 <table>
 <tr>
@@ -175,11 +175,15 @@ Sprint Recommendations
 | C7 | Kano Model classification | Must-be / Performance / Delighter |
 | C8 | Actionable recommendations | Problem Space vs Solution Space |
 
+<br/>
+
 ### 2. Sprint Transcript Analyzer
 
-> `agents/ut-transcript-analyzer.md` -- Fast, hypothesis-driven sprint analysis
+> Fast, hypothesis-driven analysis for sprint retrospectives. Auto-tags every utterance and validates sprint hypotheses.
 
-Auto-tags every user utterance with **6 semantic tags**:
+**`agents/ut-transcript-analyzer.md`**
+
+6 semantic tags applied to every user utterance:
 
 ```
 [PAIN]  Frustration, complaint       "The options are too limited"
@@ -193,11 +197,15 @@ Auto-tags every user utterance with **6 semantic tags**:
 Auto-generates hypothesis validation verdicts:
 **Validated** | **Partially Validated** | **Rejected** | **Insufficient Data**
 
+<br/>
+
 ### 3. Standalone Prompt
 
-> `prompts/ut-auto-summary.md` -- Works with any LLM, no setup required
+> Works with any LLM, no setup required. Copy-paste into ChatGPT, Claude, Gemini, or any LLM.
 
-Copy-paste into ChatGPT, Claude, Gemini, or any LLM. Get a Slack-ready sprint retrospective summary in seconds.
+**`prompts/ut-auto-summary.md`**
+
+Get a Slack-ready sprint retrospective summary in seconds.
 
 <br/>
 
@@ -233,7 +241,6 @@ Hypothesis: "The new search flow increases task completion rate"
 ```
 
 **Any LLM (no setup):**
-
 Copy `prompts/ut-auto-summary.md` and paste into any LLM with your transcript.
 
 > [!TIP]
@@ -244,7 +251,7 @@ Copy `prompts/ut-auto-summary.md` and paste into any LLM with your transcript.
 ## Example Output
 
 <details>
-<summary><strong>Click to see sample analysis output</strong></summary>
+<summary><strong>Click to expand sample analysis output</strong></summary>
 
 <br/>
 
@@ -282,18 +289,18 @@ Copy `prompts/ut-auto-summary.md` and paste into any LLM with your transcript.
 **H1: Users complete onboarding without assistance**
 **Verdict: Partially Validated**
 
-| Axis           | Verdict | Evidence                              |
-|----------------|---------|---------------------------------------|
-| Task completion | Present | Completed 4/5 steps independently     |
-| Comprehension  | Weak    | "What does this icon mean?" (05:12)   |
-| Satisfaction   | Present | "That was pretty straightforward" (07:45) |
+| Axis            | Verdict | Evidence                               |
+|-----------------|---------|----------------------------------------|
+| Task completion | Present | Completed 4/5 steps independently      |
+| Comprehension   | Weak    | "What does this icon mean?" (05:12)    |
+| Satisfaction    | Present | "That was pretty straightforward" (07:45) |
 
 ## 3. Usability Issues
 
-| Screen    | Issue                    | Heuristic              | Severity |
-|-----------|--------------------------|------------------------|----------|
-| Dashboard | Icon meaning unclear     | Recognition > Recall   | 3/4      |
-| Settings  | No confirmation on save  | System Status Visibility | 2/4    |
+| Screen    | Issue                   | Heuristic              | Severity |
+|-----------|-------------------------|------------------------|----------|
+| Dashboard | Icon meaning unclear    | Recognition > Recall   | 3/4      |
+| Settings  | No confirmation on save | System Status Visibility | 2/4    |
 ```
 
 </details>
@@ -302,7 +309,7 @@ Copy `prompts/ut-auto-summary.md` and paste into any LLM with your transcript.
 
 ## Methodology References
 
-This toolkit is built on established, peer-reviewed UX research frameworks:
+> This toolkit is built on established, peer-reviewed UX research frameworks.
 
 | Framework | Author | Applied In |
 |:----------|:-------|:-----------|
@@ -398,10 +405,8 @@ Built by [Soyeon Lee](https://github.com/Lee-Soyeon) -- from real pain of analyz
 
 **If this saves you time on your next user test, consider giving it a star.**
 
-<br/>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Lee-Soyeon/ux-research-agents&type=Date)](https://star-history.com/#Lee-Soyeon/ux-research-agents&Date)
+[![Stargazers over time](https://starchart.cc/Lee-Soyeon/ux-research-agents.svg?variant=adaptive)](https://starchart.cc/Lee-Soyeon/ux-research-agents)
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFB6C1,50:FF69B4,100:FF1493&height=100&section=footer" width="100%"/>
