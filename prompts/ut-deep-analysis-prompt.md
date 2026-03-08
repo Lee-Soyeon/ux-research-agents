@@ -200,9 +200,7 @@ Principle: "The system image must convey the correct conceptual model" (Norman)
 
 STAGE 11: NORMAN'S 7 STAGES OF ACTION
 
-For each major task:
-| Stage | Observation | Problem? |
-1. Goal / 2. Plan / 3. Specify / 4. Perform / 5. Perceive / 6. Interpret / 7. Compare
+For each major task, create a table with columns for "Stage", "Observation", and "Problem?". The rows should correspond to the 7 stages of action: Goal, Plan, Specify, Perform, Perceive, Interpret, and Compare.
 
 Identify:
 - Gulf of Execution: user could not translate intent into action
