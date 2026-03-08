@@ -16,7 +16,11 @@
 
 <br/>
 
-[Quick Start](#-quick-start) &#8226; [Features](#-whats-inside) &#8226; [Example Output](#-example-output) &#8226; [Roadmap](#-roadmap) &#8226; [Contributing](#-contributing)
+[![Quick Start](https://img.shields.io/badge/Quick_Start-FF006E?style=for-the-badge&logoColor=white)](#-quick-start)
+[![Features](https://img.shields.io/badge/Features-FF69B4?style=for-the-badge&logoColor=white)](#-whats-inside)
+[![Example](https://img.shields.io/badge/Example_Output-FF006E?style=for-the-badge&logoColor=white)](#-example-output)
+[![Roadmap](https://img.shields.io/badge/Roadmap-FF69B4?style=for-the-badge&logoColor=white)](#-roadmap)
+[![Contributing](https://img.shields.io/badge/Contributing-FF006E?style=for-the-badge&logoColor=white)](#-contributing)
 
 </div>
 
@@ -403,9 +407,17 @@ Built by [Soyeon Lee](https://github.com/Lee-Soyeon) -- from real pain of analyz
 
 <div align="center">
 
-**If this saves you time on your next user test, consider giving it a star.**
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=27&height=1" width="50%"/>
 
-[![Stargazers over time](https://starchart.cc/Lee-Soyeon/ux-research-agents.svg?variant=adaptive)](https://starchart.cc/Lee-Soyeon/ux-research-agents)
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=4000&pause=2000&color=FF69B4&center=true&vCenter=true&random=false&width=500&height=30&lines=If+this+saves+you+time%2C+give+it+a+star+%E2%AD%90" alt="Star CTA" />
+
+<br/>
+<br/>
+
+[![Star this repo](https://img.shields.io/badge/Star_this_repo-FF006E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lee-Soyeon/ux-research-agents)
+[![GitHub stars](https://img.shields.io/github/stars/Lee-Soyeon/ux-research-agents?style=for-the-badge&color=FF69B4&label=Stars)](https://github.com/Lee-Soyeon/ux-research-agents/stargazers)
 
 </div>
 
