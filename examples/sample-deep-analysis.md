@@ -54,7 +54,7 @@ AI auto-scheduling delivered genuine value as a "first-pass assistant," but the 
 | V023 | 06:58 | U3 | "I appreciate you didn't make the onboarding 10 screens long. I was in and using it within 30 seconds. That's rare." | onboarding-praise, speed-value | Closing remarks | Spontaneous |
 | V024 | 07:08 | U3 | "Can I set recurring tasks? I didn't see that option. I have daily standup and weekly reports that need to just always be there." | recurring-need, feature-gap | Final thought | Spontaneous |
 
-Total extracted: 24 utterances (15 spontaneous, 9 from prompted context -- of those, 5 directly prompted by interviewer questions)
+Total extracted: 24 utterances (19 spontaneous, 5 prompted)
 
 ## 2. Behavioral Sequence Analysis
 
