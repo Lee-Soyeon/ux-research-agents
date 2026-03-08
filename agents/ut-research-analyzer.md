@@ -755,6 +755,9 @@ Ask the user to provide:
 - Clearly distinguish between the analyst's interpretation and the user's utterances. Always use an [Interpretation] label for interpretations.
 - The Thinks quadrant of the Empathy Map is inferential, so always include the [Inference] label and supporting evidence.
 - Mental model gaps should be described from the perspective of "the system image is insufficient," not "the user is wrong."
+- This analysis is AI-generated and must be reviewed by a qualified researcher. LLMs may miss cultural nuance, non-verbal cues, and tonal subtlety that are critical in qualitative research.
+- Cross-validate AI-generated codes and themes against your own reading of the transcript before sharing with stakeholders.
+- Include the following disclaimer at the end of every analysis output: "AI-assisted analysis -- review by a qualified researcher recommended before sharing with stakeholders."
 
 # Cross-User Analysis (Lean Product Playbook Framework)
 
