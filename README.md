@@ -1,103 +1,216 @@
-# UX Research Agents
+<div align="center">
 
-**AI-powered UX research analysis toolkit** — Turn raw user test transcripts into structured, evidence-based insights using proven UX methodologies.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24&height=200&section=header&text=UX%20Research%20Agents&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=35&desc=AI-Powered%20Qualitative%20Research%20Analysis&descSize=18&descAlignY=55" width="100%"/>
 
-Built with [Claude Code](https://claude.ai/claude-code) agents. Battle-tested on 50+ real user interviews across multiple product sprints.
+<br/>
 
-<p align="center">
-  <img src="docs/images/overview-diagram.png" alt="UX Research Agents Overview" width="800">
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&random=false&width=600&lines=Turn+raw+transcripts+into+structured+insights;14+proven+UX+methodologies+%E2%80%94+automated;Built+with+Claude+Code+agents;Battle-tested+on+50%2B+real+user+interviews" alt="Typing SVG" />
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-blueviolet)](https://claude.ai/claude-code)
+<br/>
+<br/>
 
----
+[![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Built_with-Claude_Code-7c3aed?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/claude-code)
+[![Stars](https://img.shields.io/github/stars/Lee-Soyeon/ux-research-agents?style=for-the-badge&color=f59e0b)](https://github.com/Lee-Soyeon/ux-research-agents/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-06b6d4?style=for-the-badge)](CONTRIBUTING.md)
 
-## Why This Exists
+<br/>
 
-UX researchers spend **60-70% of their time** on analysis and synthesis — not research itself. Commercial tools (Dovetail, Maze, Marvin) cost $100-500/month and still require manual work.
+[Quick Start](#-quick-start) &#8226; [Features](#-whats-inside) &#8226; [Example Output](#-example-output) &#8226; [Roadmap](#-roadmap) &#8226; [Contributing](#-contributing)
 
-This toolkit automates the heavy lifting:
+</div>
 
-- **Raw transcript in** → **Structured analysis out** (in minutes, not days)
-- **14 proven UX methodologies** applied systematically
-- **Evidence-based**: Every insight links back to exact user quotes with timestamps
-- **No hallucination**: Strict rules against speculation — if there's no evidence, it says so
+<br/>
+
+## The Problem
+
+UX researchers spend **60-70% of their time** on analysis and synthesis -- not research itself.
+
+Commercial tools (Dovetail, Maze, Marvin) cost **$100-500/month** and still require significant manual work.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Without this toolkit**
+
+- Transcribe interview (30 min)
+- Read through transcript (45 min)
+- Extract key quotes (60 min)
+- Code and categorize (90 min)
+- Synthesize findings (120 min)
+- Write report (90 min)
+
+**Total: 7+ hours per interview**
+
+</td>
+<td width="50%" valign="top">
+
+**With UX Research Agents**
+
+- Feed transcript to agent
+- Get structured analysis back
+- Review and refine
+
+**Total: 15-30 minutes per interview**
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+## How It Works
+
+```mermaid
+graph LR
+    A["Raw Transcript\n(any STT tool)"] --> B["Claude Code Agent"]
+    B --> C["14-Stage Analysis"]
+    C --> D["Verbatim Coding"]
+    C --> E["Empathy Map"]
+    C --> F["Thematic Analysis"]
+    C --> G["JTBD + Persona"]
+    C --> H["Hypothesis Validation"]
+    C --> I["Pain/Gain Report"]
+
+    style A fill:#1e293b,stroke:#475569,color:#e2e8f0
+    style B fill:#7c3aed,stroke:#8b5cf6,color:#fff
+    style C fill:#2563eb,stroke:#3b82f6,color:#fff
+    style D fill:#059669,stroke:#10b981,color:#fff
+    style E fill:#059669,stroke:#10b981,color:#fff
+    style F fill:#059669,stroke:#10b981,color:#fff
+    style G fill:#059669,stroke:#10b981,color:#fff
+    style H fill:#059669,stroke:#10b981,color:#fff
+    style I fill:#059669,stroke:#10b981,color:#fff
+```
+
+For multiple users, run **Cross-User Analysis** to consolidate:
+
+```mermaid
+graph LR
+    U1["User 1 Analysis"] --> X["Cross-User\nAnalysis"]
+    U2["User 2 Analysis"] --> X
+    U3["User N Analysis"] --> X
+    X --> P["Consolidated\nPersonas"]
+    X --> G["PMF Pyramid\nDiagnosis"]
+    X --> K["Kano Model\nClassification"]
+    X --> R["Prioritized\nRecommendations"]
+
+    style X fill:#7c3aed,stroke:#8b5cf6,color:#fff
+    style P fill:#059669,stroke:#10b981,color:#fff
+    style G fill:#059669,stroke:#10b981,color:#fff
+    style K fill:#059669,stroke:#10b981,color:#fff
+    style R fill:#059669,stroke:#10b981,color:#fff
+```
+
+<br/>
 
 ## What's Inside
 
-### 1. Deep Research Analyzer (`agents/ut-research-analyzer.md`)
+### 1. Deep Research Analyzer
 
-A comprehensive 14-stage analysis pipeline that applies established UX research frameworks to raw interview transcripts.
+> `agents/ut-research-analyzer.md` -- 1,200+ lines of battle-tested prompts
 
-**Individual User Analysis (14 Stages):**
+A comprehensive **14-stage analysis pipeline** applying established UX research frameworks:
+
+<table>
+<tr>
+<td align="center" width="25%"><strong>Stage 1-4</strong><br/><sub>Foundation</sub></td>
+<td align="center" width="25%"><strong>Stage 5-8</strong><br/><sub>Synthesis</sub></td>
+<td align="center" width="25%"><strong>Stage 9-12</strong><br/><sub>Deep Analysis</sub></td>
+<td align="center" width="25%"><strong>Stage 13-14</strong><br/><sub>Validation</sub></td>
+</tr>
+<tr>
+<td valign="top">
+
+Preprocessing<br/>
+Verbatim Coding<br/>
+Behavioral Sequence<br/>
+Emotional Journey
+
+</td>
+<td valign="top">
+
+Empathy Map (NNG)<br/>
+Thematic Analysis<br/>
+Affinity Mapping<br/>
+Jobs-to-be-Done
+
+</td>
+<td valign="top">
+
+Proto-Persona (NNG)<br/>
+Mental Model Gap<br/>
+7 Stages of Action<br/>
+3 Levels of Processing
+
+</td>
+<td valign="top">
+
+Hypothesis Validation<br/>
+Nielsen's Heuristics<br/>
+Pain/Gain Analysis<br/>
+Sprint Recommendations
+
+</td>
+</tr>
+<tr>
+<td><sub>Don Norman</sub></td>
+<td><sub>Braun & Clarke, NNG</sub></td>
+<td><sub>Don Norman</sub></td>
+<td><sub>Nielsen, Dan Olsen</sub></td>
+</tr>
+</table>
+
+**Cross-User Analysis** (8 additional stages):
 
 | Stage | Method | Framework |
-|-------|--------|-----------|
-| 1 | Transcript preprocessing & speaker identification | — |
-| 2 | Verbatim extraction & semantic coding | Qualitative coding (14 rules) |
-| 3 | Behavioral sequence analysis | Timeline mapping |
-| 4 | Emotional journey mapping | Peak-end analysis |
-| 5 | Empathy Map | NNG Says/Thinks/Does/Feels |
-| 6 | Thematic analysis | Braun & Clarke 6-phase |
-| 7 | Affinity mapping | Cluster by type |
-| 8 | Jobs-to-be-Done analysis | JTBD framework |
-| 9 | Proto-Persona sketch | NNG methodology |
-| 10 | Mental model gap analysis | Don Norman |
-| 11 | 7 Stages of Action analysis | Don Norman |
-| 12 | 3 Levels of Processing | Don Norman (Visceral/Behavioral/Reflective) |
-| 13 | Hypothesis validation | Evidence-based mapping |
-| 14 | Usability issues & Pain/Gain | Nielsen's 10 heuristics |
-
-**Cross-User Analysis (8 Stages):**
-
-| Stage | Method | Framework |
-|-------|--------|-----------|
-| C1 | Verbatim cross-comparison | — |
-| C2 | Hypothesis cross-validation | — |
-| C3 | Theme cross-mapping | Universal/Major/Segment/Unique |
+|:------|:-------|:----------|
+| C1 | Verbatim cross-comparison | Pattern matching |
+| C2 | Hypothesis cross-validation | Evidence aggregation |
+| C3 | Theme cross-mapping | Universal / Major / Segment / Unique |
 | C4 | Persona consolidation | 2-3 representative personas |
-| C5 | Importance-Satisfaction Gap | Lean Product Playbook |
+| C5 | Importance-Satisfaction Gap | Lean Product Playbook (Dan Olsen) |
 | C6 | PMF Pyramid mapping | 5-layer product-market fit |
-| C7 | Kano Model classification | Must-be/Performance/Delighter |
-| C8 | Actionable recommendations | Problem vs Solution space |
+| C7 | Kano Model classification | Must-be / Performance / Delighter |
+| C8 | Actionable recommendations | Problem Space vs Solution Space |
 
-### 2. Sprint Transcript Analyzer (`agents/ut-transcript-analyzer.md`)
+### 2. Sprint Transcript Analyzer
 
-Fast, hypothesis-driven analysis for sprint retrospectives. Auto-tags every utterance and validates sprint hypotheses.
+> `agents/ut-transcript-analyzer.md` -- Fast, hypothesis-driven sprint analysis
 
-**6 Semantic Tags:**
+Auto-tags every user utterance with **6 semantic tags**:
 
-| Tag | Meaning | Example |
-|-----|---------|---------|
-| `[PAIN]` | Frustration, complaint, negative emotion | "The options are too limited" |
-| `[AHA]` | Positive surprise, engagement, delight | "I didn't expect to get so into this" |
-| `[WTP]` | Willingness to pay, recommend, reuse | "At $3, I'd consider it" |
-| `[BEHAV]` | Observable behavior (hesitation, repeated exploration, skip) | Timestamped observations |
-| `[NEED]` | Feature request, improvement suggestion | "It would be nice if it had..." |
-| `[COMP]` | Competitor/existing service comparison | "Bubble does X, but this..." |
+```
+[PAIN]  Frustration, complaint       "The options are too limited"
+[AHA]   Positive surprise, delight   "I didn't expect to get so into this"
+[WTP]   Willingness to pay/reuse     "At $3, I'd consider it"
+[BEHAV] Observable behavior           Hesitation at 03:42, repeated exploration
+[NEED]  Feature request               "It would be nice if it had..."
+[COMP]  Competitor comparison          "Notion does X, but this..."
+```
 
-**Auto-generates:**
-- Tagged utterance report
-- Hypothesis validation (Validated / Partially Validated / Rejected / Insufficient Data)
-- UX vs Functional Architecture issue classification
-- Next sprint action items (max 3)
+Auto-generates hypothesis validation verdicts:
+**Validated** | **Partially Validated** | **Rejected** | **Insufficient Data**
 
-### 3. UT Auto-Summary Prompt (`prompts/ut-auto-summary.md`)
+### 3. Standalone Prompt
 
-Lightweight prompt for quick Slack-ready sprint retrospective summaries. No agent setup required — paste into any LLM.
+> `prompts/ut-auto-summary.md` -- Works with any LLM, no setup required
+
+Copy-paste into ChatGPT, Claude, Gemini, or any LLM. Get a Slack-ready sprint retrospective summary in seconds.
+
+<br/>
 
 ## Quick Start
 
 ### Prerequisites
 
 - [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed
-- Interview transcripts (from Clova Note, Otter.ai, or any STT tool)
+- Interview transcripts from any STT tool (Clova Note, Otter.ai, Whisper, etc.)
 
 ### Installation
 
 ```bash
-# Clone the repo
 git clone https://github.com/Lee-Soyeon/ux-research-agents.git
 
 # Copy agents to your Claude Code config
@@ -107,137 +220,188 @@ cp ux-research-agents/agents/*.md ~/.claude/agents/
 ### Usage
 
 **Deep analysis (14-stage):**
-```
+```bash
 # In Claude Code, invoke the agent:
 @ut-research-analyzer Analyze /path/to/transcript.txt
-Hypotheses: "Users will form emotional attachment through the onboarding flow"
+Hypotheses: "Users will complete onboarding without help"
 ```
 
 **Sprint analysis (quick):**
-```
+```bash
 @ut-transcript-analyzer Analyze /path/to/transcript.txt
-Hypothesis: "The new casting flow increases user engagement"
+Hypothesis: "The new search flow increases task completion rate"
 ```
 
-**Standalone prompt (any LLM):**
-Copy `prompts/ut-auto-summary.md` and paste into ChatGPT, Claude, or any LLM with your transcript.
+**Any LLM (no setup):**
+
+Copy `prompts/ut-auto-summary.md` and paste into any LLM with your transcript.
+
+> [!TIP]
+> Start with the Sprint Transcript Analyzer for quick results, then use the Deep Research Analyzer when you need comprehensive insights.
+
+<br/>
 
 ## Example Output
 
 <details>
-<summary>Click to see sample analysis output</summary>
+<summary><strong>Click to see sample analysis output</strong></summary>
+
+<br/>
 
 ```markdown
 # Sprint 2 - UT Sprint Summary: User #8
 
-> Testing scope: Casting flow + relationship setting + content consumption
+> Testing scope: Onboarding flow + task creation + dashboard comprehension
 
 ## User Info
-- 24F, college student, K-pop fan (BTS), no AI product experience
-- Segment: A (Fan-oriented)
+- 24F, college student, no prior experience with this product category
+- Segment: New User
 
 ## 0. One-line Key Finding
-- Casting flow successfully created emotional attachment,
-  but content consumption did not convert to payment intent.
+- Onboarding flow successfully built initial understanding,
+  but dashboard complexity caused confusion and reduced task completion.
 
 ## 1. Tagged Key Utterances
 
 ### [PAIN]
 > "I don't really get what this button does" (03:42)
+> "There are too many things on this screen" (11:20)
 
 ### [AHA]
-> "Wait, this actually feels like my own group" (08:15)
+> "Oh wait, this actually makes sense now" (08:15)
+> "I like how it shows me what to do next" (06:30)
 
 ### [WTP]
-> "Maybe if it were $3... I'd think about it" (22:30)
+> "If it saved me this much time every week... maybe $5/month?" (22:30)
+
+### [NEED]
+> "It would be nice if I could undo this" (14:55)
 
 ## 2. Hypothesis Validation
 
-**H1: Casting creates emotional attachment**
-**Verdict: Validated**
+**H1: Users complete onboarding without assistance**
+**Verdict: Partially Validated**
 
-| Axis | Verdict | Evidence |
-|------|---------|----------|
-| Emotional response | Present | "feels like my own group" (08:15) |
-| Time spent | Present | 4min on casting (above average) |
-| Return intent | Present | "I'd come back to check on them" (25:10) |
+| Axis           | Verdict | Evidence                              |
+|----------------|---------|---------------------------------------|
+| Task completion | Present | Completed 4/5 steps independently     |
+| Comprehension  | Weak    | "What does this icon mean?" (05:12)   |
+| Satisfaction   | Present | "That was pretty straightforward" (07:45) |
+
+## 3. Usability Issues
+
+| Screen    | Issue                    | Heuristic              | Severity |
+|-----------|--------------------------|------------------------|----------|
+| Dashboard | Icon meaning unclear     | Recognition > Recall   | 3/4      |
+| Settings  | No confirmation on save  | System Status Visibility | 2/4    |
 ```
 
 </details>
 
+<br/>
+
 ## Methodology References
 
-This toolkit is built on established UX research frameworks:
+This toolkit is built on established, peer-reviewed UX research frameworks:
 
-- **Nielsen Norman Group (NNG)**: Empathy Mapping, Persona Development, Usability Heuristics
-- **Don Norman**: Mental Model Gap Analysis, 7 Stages of Action, 3 Levels of Emotional Design
-- **Braun & Clarke**: Thematic Analysis (6-phase)
-- **Dan Olsen**: Lean Product Playbook, Importance-Satisfaction Gap, PMF Pyramid
-- **Clayton Christensen**: Jobs-to-be-Done
-- **Noriaki Kano**: Kano Model
+| Framework | Author | Applied In |
+|:----------|:-------|:-----------|
+| Empathy Mapping, Persona Development | **Nielsen Norman Group** | Stages 5, 9 |
+| Mental Model Gap, 7 Stages of Action, 3 Levels of Design | **Don Norman** | Stages 10, 11, 12 |
+| 6-Phase Thematic Analysis | **Braun & Clarke** | Stage 6 |
+| Lean Product Playbook, PMF Pyramid | **Dan Olsen** | Cross-Analysis C5, C6 |
+| Jobs-to-be-Done | **Clayton Christensen** | Stage 8 |
+| Kano Model | **Noriaki Kano** | Cross-Analysis C7 |
+| 10 Usability Heuristics | **Jakob Nielsen** | Stage 14 |
+| Peak-End Rule | **Daniel Kahneman** | Stage 4 |
+
+<br/>
 
 ## Project Structure
 
 ```
 ux-research-agents/
-├── agents/                          # Claude Code agents
+├── agents/                          # Claude Code agents (drop-in ready)
 │   ├── ut-research-analyzer.md      # 14-stage deep analysis (1,200+ lines)
 │   └── ut-transcript-analyzer.md    # Sprint-level quick analysis
-├── prompts/                         # Standalone prompts (works with any LLM)
-│   └── ut-auto-summary.md           # Quick summary prompt
-├── examples/                        # Sample transcripts and outputs
-│   ├── sample-transcript.md         # Anonymized sample input
-│   └── sample-analysis-output.md    # What the output looks like
-├── docs/                            # Documentation
-│   ├── methodology-guide.md         # Deep dive into each methodology
-│   ├── customization-guide.md       # How to adapt for your product
-│   └── images/                      # Diagrams and screenshots
-├── templates/                       # Reusable templates
+├── prompts/                         # Standalone prompts (any LLM)
+│   └── ut-auto-summary.md           # Quick Slack-ready summary
+├── examples/                        # Try it yourself
+│   └── sample-transcript.md         # Fictional sample interview
+├── templates/                       # Reusable research templates
 │   ├── ut-interview-guide.md        # Interview guide template
 │   └── hypothesis-template.md       # Sprint hypothesis template
+├── CONTRIBUTING.md
+├── LICENSE
 └── README.md
 ```
+
+<br/>
 
 ## Roadmap
 
 - [x] Core analysis agents (14-stage + sprint-level)
+- [x] Cross-user analysis (8-stage, Lean Product Playbook)
 - [x] Standalone prompt for any LLM
+- [x] Interview guide & hypothesis templates
 - [ ] PostHog session replay AI analysis agent
 - [ ] Playwright-based automated UX testing agent
-- [ ] Hotjar/FullStory session replay analysis
-- [ ] Multi-language support (currently Korean-optimized, English WIP)
-- [ ] Video/screen recording analysis (mp4 → UX insights)
-- [ ] Integration with Notion/Linear for issue tracking
+- [ ] Hotjar / FullStory session replay analysis
+- [ ] Video / screen recording analysis (mp4 to UX insights)
+- [ ] Multi-language transcript support
+- [ ] Integration with Notion / Linear for issue tracking
+
+<br/>
 
 ## Who Is This For
 
-- **UX Researchers** who want to speed up analysis without losing rigor
-- **Product Managers** who need evidence-based sprint retrospectives
-- **Startup Founders** running lean user tests with limited resources
-- **Students & Educators** learning UX research methodologies through practice
-- **Anyone** who interviews users and needs structured insights fast
+| Role | Use Case |
+|:-----|:---------|
+| **UX Researchers** | Speed up analysis without losing academic rigor |
+| **Product Managers** | Get evidence-based sprint retrospectives |
+| **Startup Founders** | Run lean user tests with limited resources |
+| **Students & Educators** | Learn UX research methodologies through practice |
+| **Design Teams** | Build shared understanding from user data |
+
+<br/>
 
 ## Contributing
 
 Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-Some ways to contribute:
-- Add new analysis methodologies
+Ways to contribute:
+- Add new analysis methodologies or frameworks
 - Share anonymized example transcripts
 - Improve multi-language support
-- Build integrations with other tools (PostHog, Hotjar, Maze)
+- Build integrations (PostHog, Hotjar, Maze, Dovetail)
 - Report issues or suggest improvements
+
+<br/>
 
 ## About
 
-Built by [Soyeon Lee](https://github.com/Lee-Soyeon), CEO @ [AIoIA](https://aioia.ai) — from real pain of analyzing 50+ user interviews across multiple product discovery sprints.
+Built by [Soyeon Lee](https://github.com/Lee-Soyeon) -- from real pain of analyzing **50+ user interviews** across multiple product discovery sprints.
 
-This toolkit was born from the belief that **rigorous UX research shouldn't require expensive tools or weeks of manual analysis**. Every framework and rule in these agents comes from hands-on experience running user tests and iterating on products.
+> Rigorous UX research shouldn't require expensive tools or weeks of manual analysis.
+> Every framework and rule in these agents comes from hands-on experience
+> running user tests and iterating on real products.
+
+<br/>
 
 ## License
 
-MIT License — use it, modify it, share it.
+[MIT License](LICENSE) -- use it, modify it, share it.
 
----
+<br/>
 
-**If this saves you time on your next user test, consider giving it a star!**
+<div align="center">
+
+**If this saves you time on your next user test, consider giving it a star.**
+
+<br/>
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Lee-Soyeon/ux-research-agents&type=Date)](https://star-history.com/#Lee-Soyeon/ux-research-agents&Date)
+
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24&height=100&section=footer" width="100%"/>
