@@ -38,7 +38,9 @@ Sprint analysis (quick):
 Hypothesis: "The new search flow increases task completion rate"
 ```
 
-The standalone prompt in `prompts/ut-auto-summary.md` works with any LLM — copy-paste it into ChatGPT, Claude, or Gemini with your transcript.
+The standalone prompts in `prompts/` work with any LLM — copy-paste into ChatGPT, Claude, or Gemini with your transcript:
+- `prompts/ut-auto-summary.md` — Quick sprint retrospective summary
+- `prompts/ut-deep-analysis-prompt.md` — Full 14-stage deep analysis (no agent required)
 
 > [!TIP]
 > Start with the Sprint Transcript Analyzer for quick results, then use the Deep Research Analyzer when you need comprehensive insights.
@@ -98,16 +100,18 @@ Fast, hypothesis-driven analysis for sprint retrospectives. Tags every user utte
 
 Generates hypothesis validation verdicts: **Validated** / **Partially Validated** / **Rejected** / **Insufficient Data**, plus UX vs Functional Architecture issue classification and next sprint actions (max 3).
 
-### 3. Standalone Prompt
+### 3. Standalone Prompts
 
-`prompts/ut-auto-summary.md`
+`prompts/ut-auto-summary.md` — Lightweight sprint retrospective summary. No agent setup required — paste into any LLM.
 
-A lightweight prompt for Slack-ready sprint retrospective summaries. No agent setup required — paste into any LLM.
+`prompts/ut-deep-analysis-prompt.md` — Full 14-stage deep analysis as a standalone prompt. Split into Part 1 (Stages 1-7) and Part 2 (Stages 8-14) for LLMs with limited context windows.
 
 ## Example output
 
+For a complete 14-stage deep analysis output, see [examples/sample-deep-analysis.md](examples/sample-deep-analysis.md).
+
 <details>
-<summary>Sample analysis output</summary>
+<summary>Sprint analysis output (quick)</summary>
 
 ```markdown
 # Sprint 2 - UT Sprint Summary: User #8
@@ -155,6 +159,19 @@ A lightweight prompt for Slack-ready sprint retrospective summaries. No agent se
 
 </details>
 
+## Limitations
+
+This toolkit uses LLMs to automate qualitative analysis. Be aware of inherent limitations:
+
+- **No non-verbal cues**: LLMs analyze text only. Facial expressions, tone of voice, body language, sighs, and pauses are invisible unless explicitly noted in the transcript.
+- **Cultural nuance**: Sarcasm, politeness norms, and culturally specific expressions may be misinterpreted or missed entirely.
+- **Hallucination risk**: LLMs may generate inferences that sound plausible but are not grounded in the transcript. Always verify codes and themes against the source text.
+- **Not a replacement**: This tool assists researchers -- it does not replace them. A qualified UX researcher should review all AI-generated analysis before sharing with stakeholders.
+- **Single-interview scope**: One interview cannot be generalized to a population. Use cross-user analysis with multiple participants before drawing product conclusions.
+- **Prompt sensitivity**: Results may vary across LLM providers, model versions, and even between runs. Treat outputs as a strong first draft, not a final report.
+
+For details on why these specific methodologies were chosen and ordered this way, see [Design Rationale](docs/design-rationale.md).
+
 ## Methodology
 
 Built on established, peer-reviewed UX research frameworks:
@@ -175,9 +192,13 @@ ux-research-agents/
 │   ├── ut-research-analyzer.md      # 14-stage deep analysis (1,200+ lines)
 │   └── ut-transcript-analyzer.md    # Sprint-level quick analysis
 ├── prompts/
-│   └── ut-auto-summary.md           # Standalone prompt for any LLM
+│   ├── ut-auto-summary.md           # Standalone prompt for any LLM
+│   └── ut-deep-analysis-prompt.md   # Full 14-stage prompt (no agent needed)
 ├── examples/
-│   └── sample-transcript.md         # Fictional sample interview
+│   ├── sample-transcript.md         # Fictional sample interview
+│   └── sample-deep-analysis.md      # Complete 14-stage analysis output
+├── docs/
+│   └── design-rationale.md          # Why these methodologies and this order
 ├── templates/
 │   ├── ut-interview-guide.md        # Interview guide template
 │   └── hypothesis-template.md       # Sprint hypothesis template
